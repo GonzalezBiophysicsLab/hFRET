@@ -1,0 +1,23 @@
+tm(1).params(1).tm = [.15 .85;.85 .15];
+tm(2).params(1).tm = [.1 .85 .05;.35 .1 .55];
+tm(2).params(2).tm = [.14 .5 36;.5 .14 .36];
+tm(3).params(1).tm = [.85 .149 .001;.149 .85 .001];
+tm(3).params(2).tm = [.99 .009 .001;.90 .09 .01];
+tm(3).params(3).tm = [.90 .09 .01;.009 .99 .001];
+tm(3).params(4).tm = [.90 .09 .01;.0009 .999 .0001];
+tm(1).params(1).entry = [.5 .5];
+tm(2).params(1).entry = [.5 .5];
+tm(2).params(2).entry = [.5 .5];
+tm(3).params(1).entry = [.5 .5];
+tm(3).params(2).entry = [.5 .5];
+tm(3).params(3).entry = [.5 .5];
+tm(3).params(4).entry = [.5 .5];
+em.sigma = [.1 .1];
+em.m = [0 1];
+trace = hhmm_simulate_trace(tm,em,1e7);
+dat = trace.trace(end-1e6:end);
+time = 1:1e3;
+for rk = 1e3:-1:1
+    data(:,rk) = dat(time);
+    time = time+1e3;
+end
