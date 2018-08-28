@@ -1,6 +1,5 @@
 function varargout = hist2Dprompt(varargin)
-% hist2Dprompt helps the user construct a tree for hhmm_gui_main
-% the output here gets shunted directly into hhmm_gui_main
+% hist2Dprompt helps the user construct a 2D histogram for hfret_gui_main
 % JH 9/21/2016
 
 % Last Modified by GUIDE v2.5 06-Apr-2018 15:56:06

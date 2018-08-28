@@ -1,6 +1,5 @@
 function varargout = coordinateprompt(varargin)
-% coordinateprompt helps the user construct a tree for hhmm_gui_main
-% the output here gets shunted directly into hhmm_gui_main
+% coordinateprompt helps the user choose coordinates for hfret_gui_main
 % JH 9/21/2016
 
 % Last Modified by GUIDE v2.5 04-Apr-2018 13:41:21

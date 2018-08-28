@@ -1,6 +1,6 @@
 function varargout = hhmmparametersprompt(varargin)
-% hhmmparametersprompt helps the user construct a tree for hhmm_gui_main
-% the output here gets shunted directly into hhmm_gui_main
+% hhmmparametersprompt helps the user construct a tree for hfret_gui_main
+% the output here gets shunted directly into hfret_gui_main
 % JH 9/21/2016
 
 % Last Modified by GUIDE v2.5 28-Mar-2018 10:23:44

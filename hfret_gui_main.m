@@ -1,16 +1,16 @@
-function varargout = hhmm_gui_main(varargin)
+function varargout = hfret_gui_main(varargin)
 % includes trace splash, 2 popups for different kinds of outputs, error
 % analysis, and some ensemble level plots
 %
 
-% Last Modified by GUIDE v2.5 08-Apr-2018 21:24:09
+% Last Modified by GUIDE v2.5 27-Aug-2018 19:50:15
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
 gui_State = struct('gui_Name',       mfilename, ...
                    'gui_Singleton',  gui_Singleton, ...
-                   'gui_OpeningFcn', @hhmm_gui_main_OpeningFcn, ...
-                   'gui_OutputFcn',  @hhmm_gui_main_OutputFcn, ...
+                   'gui_OpeningFcn', @hfret_gui_main_OpeningFcn, ...
+                   'gui_OutputFcn',  @hfret_gui_main_OutputFcn, ...
                    'gui_LayoutFcn',  [] , ...
                    'gui_Callback',   []);
 if nargin && ischar(varargin{1})
@@ -25,15 +25,15 @@ end
 % End initialization code - DO NOT EDIT
 
 
-% --- Executes just before hhmm_gui_main is made visible.
-function hhmm_gui_main_OpeningFcn(hObject, eventdata, handles, varargin)
+% --- Executes just before hfret_gui_main is made visible.
+function hfret_gui_main_OpeningFcn(hObject, eventdata, handles, varargin)
 % This function has no output args, see OutputFcn.
 % hObject    handle to figure
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-% varargin   command line arguments to hhmm_gui_main (see VARARGIN)
+% varargin   command line arguments to hfret_gui_main (see VARARGIN)
 
-% Choose default command line output for hhmm_gui_main
+% Choose default command line output for hfret_gui_main
 handles.output = hObject;
 
 if ~isempty(varargin)
@@ -43,7 +43,7 @@ end
 % Update handles structure
 guidata(hObject, handles);
 
-% UIWAIT makes hhmm_gui_main wait for user response (see UIRESUME)
+% UIWAIT makes hfret_gui_main wait for user response (see UIRESUME)
 % uiwait(handles.graph1);
 
 axes(handles.graph1);
@@ -82,7 +82,7 @@ scopeplot(handles);
 guidata(hObject,handles);
 
 % --- Outputs from this function are returned to the command line.
-function varargout = hhmm_gui_main_OutputFcn(hObject, eventdata, handles) 
+function varargout = hfret_gui_main_OutputFcn(hObject, eventdata, handles) 
 % varargout  cell array for returning output args (see VARARGOUT);
 % hObject    handle to figure
 % eventdata  reserved - to be defined in a future version of MATLAB

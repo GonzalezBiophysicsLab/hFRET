@@ -1,6 +1,6 @@
 function varargout = yaxisprompt(varargin)
-% yaxisprompt helps the user construct a tree for hhmm_gui_main
-% the output here gets shunted directly into hhmm_gui_main
+% yaxisprompt helps the user construct a y axis for hfret_gui_main
+% the output here gets shunted directly into hfret_gui_main
 % JH 9/21/2016
 
 % Last Modified by GUIDE v2.5 28-Mar-2018 09:32:44

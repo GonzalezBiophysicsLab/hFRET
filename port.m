@@ -1,35 +1,35 @@
-function varargout = vbscope_port(varargin)
-% VBSCOPE_PORT MATLAB code for vbscope_port.fig
-%      VBSCOPE_PORT, by itself, creates a new VBSCOPE_PORT or raises the existing
+function varargout = port(varargin)
+% PORT MATLAB code for port.fig
+%      PORT, by itself, creates a new PORT or raises the existing
 %      singleton*.
 %
-%      H = VBSCOPE_PORT returns the handle to a new VBSCOPE_PORT or the handle to
+%      H = PORT returns the handle to a new PORT or the handle to
 %      the existing singleton*.
 %
-%      VBSCOPE_PORT('CALLBACK',hObject,eventData,handles,...) calls the local
-%      function named CALLBACK in VBSCOPE_PORT.M with the given input arguments.
+%      PORT('CALLBACK',hObject,eventData,handles,...) calls the local
+%      function named CALLBACK in PORT.M with the given input arguments.
 %
-%      VBSCOPE_PORT('Property','Value',...) creates a new VBSCOPE_PORT or raises the
+%      PORT('Property','Value',...) creates a new PORT or raises the
 %      existing singleton*.  Starting from the left, property value pairs are
-%      applied to the GUI before vbscope_port_OpeningFcn gets called.  An
+%      applied to the GUI before port_OpeningFcn gets called.  An
 %      unrecognized property name or invalid value makes property application
-%      stop.  All inputs are passed to vbscope_port_OpeningFcn via varargin.
+%      stop.  All inputs are passed to port_OpeningFcn via varargin.
 %
 %      *See GUI Options on GUIDE's Tools menu.  Choose "GUI allows only one
 %      instance to run (singleton)".
 %
 % See also: GUIDE, GUIDATA, GUIHANDLES
 
-% Edit the above text to modify the response to help vbscope_port
+% Edit the above text to modify the response to help port
 
-% Last Modified by GUIDE v2.5 04-Sep-2016 16:34:04
+% Last Modified by GUIDE v2.5 27-Aug-2018 19:51:06
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
 gui_State = struct('gui_Name',       mfilename, ...
                    'gui_Singleton',  gui_Singleton, ...
-                   'gui_OpeningFcn', @vbscope_port_OpeningFcn, ...
-                   'gui_OutputFcn',  @vbscope_port_OutputFcn, ...
+                   'gui_OpeningFcn', @port_OpeningFcn, ...
+                   'gui_OutputFcn',  @port_OutputFcn, ...
                    'gui_LayoutFcn',  [] , ...
                    'gui_Callback',   []);
 if nargin && ischar(varargin{1})
@@ -44,21 +44,21 @@ end
 % End initialization code - DO NOT EDIT
 
 
-% --- Executes just before vbscope_port is made visible.
-function vbscope_port_OpeningFcn(hObject, eventdata, handles, varargin)
+% --- Executes just before port is made visible.
+function port_OpeningFcn(hObject, eventdata, handles, varargin)
 % This function has no output args, see OutputFcn.
 % hObject    handle to figure
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-% varargin   command line arguments to vbscope_port (see VARARGIN)
+% varargin   command line arguments to port (see VARARGIN)
 
-% Choose default command line output for vbscope_port
+% Choose default command line output for port
 handles.output = hObject;
 
 % Update handles structure
 guidata(hObject, handles);
 
-% UIWAIT makes vbscope_port wait for user response (see UIRESUME)
+% UIWAIT makes port wait for user response (see UIRESUME)
 % uiwait(handles.figure1);
 
 if ~isempty(varargin)
@@ -76,7 +76,7 @@ guidata(hObject, handles);
 
 
 % --- Outputs from this function are returned to the command line.
-function varargout = vbscope_port_OutputFcn(hObject, eventdata, handles) 
+function varargout = port_OutputFcn(hObject, eventdata, handles) 
 % varargout  cell array for returning output args (see VARARGOUT);
 % hObject    handle to figure
 % eventdata  reserved - to be defined in a future version of MATLAB
@@ -147,7 +147,7 @@ switch stri{val};
         ebf = ebFRET();
     case 'BIASD'
     case 'Subpopulation HMM'
-    case 'HHMM'
+    case 'HFRET'
         cn = handles.tracestats.colornum;
         logi = [handles.class_logical(end);handles.class_logical(1:end-1)];
         class = handles.tracestats.sort~=handles.tracestats.sort;
@@ -167,7 +167,7 @@ switch stri{val};
         handles.tracestats.tracenum = sum(class);
         out.tracestats = handles.tracestats;
         out.plotstuff = handles.plotstuff;
-        hhmm_gui_main(out);
+        hfret_gui_main(out);
 end
 % --- Executes during object creation, after setting all properties.
 function analysisprogram_CreateFcn(hObject, eventdata, handles)

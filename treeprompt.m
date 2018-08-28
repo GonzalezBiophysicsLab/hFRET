@@ -1,6 +1,6 @@
 function varargout = treeprompt(varargin)
-% treeprompt helps the user construct a tree for hhmm_gui_main
-% the output here gets shunted directly into hhmm_gui_main
+% treeprompt helps the user construct a tree for hfret_gui_main
+% the output here gets shunted directly into hfret_gui_main
 % JH 9/21/2016
 
 % Last Modified by GUIDE v2.5 21-Sep-2016 13:31:50
