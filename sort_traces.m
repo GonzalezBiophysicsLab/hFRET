@@ -1,4 +1,4 @@
-function varargout = vbscope_sort_traces(varargin)
+function varargout = sort_traces(varargin)
 % sorts traces whose output matches vbscope_analyze_traces formats
 % 
 % Users must manually input their sort preferences into the table
@@ -6,16 +6,16 @@ function varargout = vbscope_sort_traces(varargin)
 
 % See also: GUIDE, GUIDATA, GUIHANDLES
 
-% Edit the above text to modify the response to help vbscope_sort_traces
+% Edit the above text to modify the response to help sort_traces
 
-% Last Modified by GUIDE v2.5 06-Sep-2016 09:38:10
+% Last Modified by GUIDE v2.5 29-Aug-2018 19:45:15
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
 gui_State = struct('gui_Name',       mfilename, ...
                    'gui_Singleton',  gui_Singleton, ...
-                   'gui_OpeningFcn', @vbscope_sort_traces_OpeningFcn, ...
-                   'gui_OutputFcn',  @vbscope_sort_traces_OutputFcn, ...
+                   'gui_OpeningFcn', @sort_traces_OpeningFcn, ...
+                   'gui_OutputFcn',  @sort_traces_OutputFcn, ...
                    'gui_LayoutFcn',  [] , ...
                    'gui_Callback',   []);
 if nargin && ischar(varargin{1})
@@ -30,21 +30,21 @@ end
 % End initialization code - DO NOT EDIT
 
 
-% --- Executes just before vbscope_sort_traces is made visible.
-function vbscope_sort_traces_OpeningFcn(hObject, eventdata, handles, varargin)
+% --- Executes just before sort_traces is made visible.
+function sort_traces_OpeningFcn(hObject, eventdata, handles, varargin)
 % This function has no output args, see OutputFcn.
 % hObject    handle to figure
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-% varargin   command line arguments to vbscope_sort_traces (see VARARGIN)
+% varargin   command line arguments to sort_traces (see VARARGIN)
 
-% Choose default command line output for vbscope_sort_traces
+% Choose default command line output for sort_traces
 handles.output = hObject;
 
 % Update handles structure
 guidata(hObject, handles);
 
-% UIWAIT makes vbscope_sort_traces wait for user response (see UIRESUME)
+% UIWAIT makes sort_traces wait for user response (see UIRESUME)
 
 
 if ~isempty(varargin)
@@ -81,7 +81,7 @@ function figure1_CloseRequestFcn(hObject, eventdata, handles)
 delete(hObject);
 
 % --- Outputs from this function are returned to the command line.
-function varargout = vbscope_sort_traces_OutputFcn(hObject, eventdata, handles) 
+function varargout = sort_traces_OutputFcn(hObject, eventdata, handles) 
 % varargout  cell array for returning output args (see VARARGOUT);
 % hObject    handle to figure
 % eventdata  reserved - to be defined in a future version of MATLAB

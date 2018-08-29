@@ -1114,7 +1114,7 @@ function sorttraces_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-handles.tracestats = vbscope_sort_traces(handles);
+handles.tracestats = sort_traces(handles);
 guidata(hObject,handles);
 scopeplot(handles);
 
