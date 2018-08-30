@@ -591,7 +591,6 @@ function Y=invpsi(X)
 % This algorithm is from Paul Fackler:
 % http://www4.ncsu.edu/~pfackler/
 %
-% Jason has taken this code off of a Harvard website without permission
     L = 1;
     Y = exp(X);
     while L > 10e-8
